@@ -1,0 +1,44 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import", "react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "no-console": "error",
+    "no-restricted-imports": "error",
+    "import/order": "error",
+    "import/no-cycle": "error",
+    "import/no-unused-modules": "error",
+    "import/no-duplicates": "error",
+    "import/first": "error",
+    "complexity": [
+      "error",
+      {
+        "max": 40
+      }
+    ],
+    "react/jsx-curly-brace-presence": ["error", { "props": "never", "children": "never" }],
+    "react/react-in-jsx-scope": "off",
+    "import/no-relative-parent-imports": "error",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-inferrable-types": "off"
+
+  },
+  "settings": {
+    "react": {
+      "version": "18.0.0"
+    }
+  }
+}

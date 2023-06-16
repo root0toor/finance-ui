@@ -1,0 +1,18 @@
+FROM node:18.9
+
+ARG APP_ENV
+
+WORKDIR /app
+
+COPY ./package.json ./yarn.lock ./.npmrc ./
+
+RUN yarn install
+
+COPY . .
+
+RUN yarn run build
+
+CMD ["yarn", "run", "preview"]
+
+
+
